@@ -44,33 +44,36 @@ a:hover {
 header {
     background: linear-gradient(to right, #e6e6e6, #1a1a1a);
     color: #fff;
-    padding: 60px 20px;
+    padding: 5vh 10vw;
     text-align: center;
-
 }
 
 header h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
+    font-size: min(5vh, 25vw);
+    margin-bottom: 1vh;
+    max-width: 100%;
+    overflow-wrap: break-word;
 }
 
 header p {
-    font-size: 1.2em;
+    font-size: min(3vh, 15vw);
     color: #e0e0e0;
 }
 
 .container {
     /* max-width: 1000px; */
-    margin: 40px auto;
-    padding: 0 40px;
+    margin: 0 auto;
+    padding: 0 8vw;
     /* height: 93vh; */
     background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    /* border-radius: 5px; */
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
+    max-width: 100%;
+    overflow-wrap: break-word;
 }
 
 section {
-    padding: 40px 0;
+    padding: 3vh 0;
     border-bottom: 1px solid #000000;
 }
 
@@ -79,24 +82,24 @@ section:last-child {
 }
 
 h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
-    color: #ff0000;
+    font-size: min(3vh, 15vw);
+    margin-bottom: 2vh;
+    color: #000000;
     position: relative;
 }
 
 h2::after {
     content: "";
     display: block;
-    width: 50px;
-    height: 3px;
-    background: #7a0088;
-    margin-top: 8px;
+    width: 50vw;
+    height: 4px;
+    background: #808080;
+    margin-top: 1vh;
 }
 
 p {
-    font-size: 1.1em;
-    margin-bottom: 15px;
+    font-size: min(1.5vh, 7.5vw);
+    margin-bottom: 2vh;
 }
 
 ul {
