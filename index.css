@@ -154,8 +154,6 @@ nav ul.nav li>a.dropdown-toggle::before {
     content: "O";
     font-weight: bold;
     font-size: 1.5em;
-    display: inline-flex;
-    align-items: center;
 }
 
 /*
