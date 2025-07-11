@@ -21,7 +21,8 @@ main {
     /* width: 100%; */
     height: 93vh;
     /* flex-grow: 1; */
-    font-size: 500%;
+    /* font-size: 500%; */
+    font-size: min(12vh, 24vw);
     /* 100% of viewport height */
     display: flex;
     text-align: center;
@@ -43,7 +44,7 @@ footer {
     padding: 0vh;
     height: 3.5vh;
     width: 100vw;
-    /* font-size: 0.9em; */
+    font-size: min(1.5vh, 5vw);
     background: linear-gradient(to right, #1a1a1a, #e6e6e6);
     color: #ffffff;
     /* margin-top: 40px; */
@@ -54,19 +55,22 @@ footer {
 /* Main container for the navigation */
 nav {
     background: linear-gradient(to right, #1a1a1a, #e6e6e6);
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     flex-wrap: wrap;
     flex-shrink: 0;
     width: 100%;
+    height: 3.5vh;
+
 }
 
 /* Base styles for all navigation links */
 nav a {
     color: #ffffff;
-    font-weight: bold;
+    /* font-weight: bold; */
     text-decoration: none;
     transition: background 0.3s;
+    /* important */
     height: 3.5vh;
     display: flex;
     justify-content: center;
@@ -91,11 +95,13 @@ nav ul.nav {
 nav ul.nav>li {
     position: relative;
     width: 100vw;
+    /* important */
+    height: 3.5vh;
 }
 
 /* Specific padding for top-level links */
 nav>a {
-    padding: 0 20px;
+    padding: 0px 0px;
 }
 
 nav ul.nav>li>a {
@@ -112,7 +118,7 @@ nav>a:hover {
 
 /* Hover for top-level list items (no background change) */
 nav ul.nav>li>a:hover {
-    background: transparent;
+    background: #808080;
 }
 
 /* Hover for dropdown menu items */
@@ -144,16 +150,22 @@ nav ul.nav li.dropdown.active>ul.dropdown-menu {
 
 /* Individual dropdown items */
 nav ul.nav li ul.dropdown-menu li a {
-    font-size: 1em;
+    font-size: min(2vh, 10vw);
 }
 
 /* --- Dropdown Toggle Icon --- */
 
 /* Base styles for dropdown toggle links */
+nav ul.nav li>a.dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+/* Base styles for dropdown toggle links */
 nav ul.nav li>a.dropdown-toggle::before {
     content: "O";
-    font-weight: bold;
-    font-size: 1.5em;
+    /* font-weight: bold; */
+    font-size: min(2vh, 10vw);
 }
 
 /*
