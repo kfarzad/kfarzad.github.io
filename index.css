@@ -1,0 +1,177 @@
+/* Basic reset and typography */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    /* background: linear-gradient(to right, #eeeeee, #000000); */
+    background: linear-gradient(to right, #e6e6e6, #1a1a1a);
+    line-height: 1.5;
+}
+
+main {
+    background: linear-gradient(to right, #e6e6e6, #1a1a1a);
+    color: #fff;
+    width: 100%;
+    height: 93vh;
+    /* flex-grow: 1; */
+    font-size: 500%;
+    /* 100% of viewport height */
+    display: flex;
+    text-align: center;
+    /* Centers text horizontally within the header */
+    /* Flexbox for vertical centering */
+    /* Enables flexbox layout */
+    justify-content: center;
+    /* Centers content horizontally within the flex container */
+    align-items: center;
+    /* Centers content vertically within the flex container */
+}
+
+footer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* color: #777; */
+    padding: 0vh;
+    height: 3.5vh;
+    width: 100vw;
+    /* font-size: 0.9em; */
+    background: linear-gradient(to right, #1a1a1a, #e6e6e6);
+    color: #ffffff;
+    /* margin-top: 40px; */
+}
+
+nav {
+    background: linear-gradient(to right, #1a1a1a, #e6e6e6);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+nav a {
+    display: flex;
+    /* Makes the anchor a flex container */
+    text-align: center;
+    /* Still useful for potential fallback or nested elements */
+    justify-content: center;
+    /* Centers items (text) horizontally within the anchor */
+    align-items: center;
+    /* Centers items (text) vertically within the anchor */
+    color: #ffffff;
+    padding: 0 20px;
+    /* Use px for left/right padding for consistency with height if it's based on vh */
+    height: 3.5vh;
+    /* Set the height of the anchor tag */
+    font-weight: bold;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: #000000;
+}
+
+nav ul.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul.nav>li {
+    position: relative;
+    width: auto;
+}
+
+/* Top-level nav items */
+nav ul.nav>li>a {
+    color: #ffffff;
+    padding: 0px 100vw;
+    display: block;
+    font-weight: bold;
+    transition: background 0.3s;
+    text-align: center;
+    position: relative;
+}
+
+/* Hover state for top-level nav items */
+nav ul.nav>li>a:hover,
+nav ul.nav li.dropdown:hover>a {
+    background: transparent;
+}
+
+/* Dropdown menu container */
+nav ul.nav li ul.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(to right, #1a1a1a, #e6e6e6);
+    /* background: linear-gradient(to right, #e6e6e6, #1a1a1a); */
+    padding: 0;
+    /* min-width: 100vw; */
+    width: 100vw;
+    z-index: 999;
+    border-radius: 0;
+    list-style: none;
+}
+
+/* Individual dropdown items */
+nav ul.nav li ul.dropdown-menu li a {
+    color: #ffffff;
+    padding: 0px 0px;
+    display: flex;
+    font-size: 1.2em;
+    height: 3.5vh;
+    /* use flex for better control */
+    justify-content: center;
+    /* horizontally center text */
+    align-items: center;
+    /* vertically center text */
+    text-align: center;
+    /* center text inside */
+}
+
+/* Hover state for dropdown items */
+nav ul.nav li ul.dropdown-menu li a:hover {
+    background: #808080;
+}
+
+/* Show dropdown on hover */
+nav ul.nav li.dropdown:hover>ul.dropdown-menu {
+    display: block;
+}
+
+/* Icon toggle (uses pseudo element on <a>) */
+nav ul.nav li>a.dropdown-toggle::before {
+    content: "O";
+    font-weight: bold;
+    font-size: 1.5em;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Change icon to "||" on hover (dropdown open) */
+nav ul.nav li.dropdown:hover>a.dropdown-toggle::before {
+    content: "I";
+}
+
+nav ul.nav li>a.dropdown-toggle {
+    position: relative;
+    display: inline-flex;
+    /* use flex for easy vertical centering */
+    align-items: center;
+    /* vertically center children (including ::before) */
+    height: 3.5vh;
+}
