@@ -129,6 +129,9 @@ footer {
     }
 }
 
+/* --- Base Navigation Styles --- */
+
+/* Main container for the navigation */
 nav {
     background: linear-gradient(to right, #1a1a1a, #e6e6e6);
     display: flex;
@@ -138,57 +141,66 @@ nav {
     width: 100%;
 }
 
+/* Base styles for all navigation links */
 nav a {
-    display: flex;
-    /* Makes the anchor a flex container */
-    text-align: center;
-    /* Still useful for potential fallback or nested elements */
-    justify-content: center;
-    /* Centers items (text) horizontally within the anchor */
-    align-items: center;
-    /* Centers items (text) vertically within the anchor */
     color: #ffffff;
-    padding: 0 20px;
-    /* Use px for left/right padding for consistency with height if it's based on vh */
-    height: 3.5vh;
-    /* Set the height of the anchor tag */
     font-weight: bold;
-    transition: background 0.3s;
     text-decoration: none;
+    transition: background 0.3s;
+    height: 3.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-nav a:hover {
-    background: #000000;
-}
-
-nav ul.nav {
+/* Base styles for all unordered lists in the navigation */
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+/* --- Specific Styles --- */
+
+/* Top-level list specific styles */
+nav ul.nav {
     display: flex;
 }
 
 nav ul.nav>li {
     position: relative;
-    width: auto;
+    width: 100vw;
 }
 
-/* Top-level nav items */
+/* Specific padding for top-level links */
+nav>a {
+    padding: 0 20px;
+}
+
 nav ul.nav>li>a {
-    color: #ffffff;
-    padding: 0px 100vw;
+    padding: 0;
     display: block;
-    font-weight: bold;
-    transition: background 0.3s;
-    text-align: center;
-    position: relative;
 }
 
-/* Hover state for top-level nav items */
-nav ul.nav>li>a:hover,
-nav ul.nav li.dropdown:hover>a {
+/* --- Hover States --- */
+
+/* General hover for non-dropdown links */
+nav>a:hover {
+    background: #000000;
+}
+
+/* Hover for top-level list items (no background change) */
+nav ul.nav>li>a:hover {
     background: transparent;
 }
+
+/* Hover for dropdown menu items */
+nav ul.nav li ul.dropdown-menu li a:hover {
+    background: #808080;
+}
+
+/* --- Dropdown Menu --- */
 
 /* Dropdown menu container */
 nav ul.nav li ul.dropdown-menu {
@@ -198,42 +210,26 @@ nav ul.nav li ul.dropdown-menu {
     left: 50%;
     transform: translateX(-50%);
     background: linear-gradient(to right, #1a1a1a, #e6e6e6);
-    /* background: linear-gradient(to right, #e6e6e6, #1a1a1a); */
-    padding: 0;
-    /* min-width: 100vw; */
     width: 100vw;
     z-index: 999;
-    border-radius: 0;
-    list-style: none;
+}
+
+/*
+  This is the key change for the "click away" functionality.
+  The dropdown now shows when the 'active' class is present on the list item.
+*/
+nav ul.nav li.dropdown.active>ul.dropdown-menu {
+    display: block;
 }
 
 /* Individual dropdown items */
 nav ul.nav li ul.dropdown-menu li a {
-    color: #ffffff;
-    padding: 0px 0px;
-    display: flex;
-    font-size: 1.2em;
-    height: 3.5vh;
-    /* use flex for better control */
-    justify-content: center;
-    /* horizontally center text */
-    align-items: center;
-    /* vertically center text */
-    text-align: center;
-    /* center text inside */
+    font-size: 1em;
 }
 
-/* Hover state for dropdown items */
-nav ul.nav li ul.dropdown-menu li a:hover {
-    background: #808080;
-}
+/* --- Dropdown Toggle Icon --- */
 
-/* Show dropdown on hover */
-nav ul.nav li.dropdown:hover>ul.dropdown-menu {
-    display: block;
-}
-
-/* Icon toggle (uses pseudo element on <a>) */
+/* Base styles for dropdown toggle links */
 nav ul.nav li>a.dropdown-toggle::before {
     content: "O";
     font-weight: bold;
@@ -242,16 +238,10 @@ nav ul.nav li>a.dropdown-toggle::before {
     align-items: center;
 }
 
-/* Change icon to "||" on hover (dropdown open) */
-nav ul.nav li.dropdown:hover>a.dropdown-toggle::before {
+/*
+  This is the key change for the "click away" functionality.
+  The icon now changes when the 'active' class is present.
+*/
+nav ul.nav li.dropdown.active>a.dropdown-toggle::before {
     content: "I";
-}
-
-nav ul.nav li>a.dropdown-toggle {
-    position: relative;
-    display: inline-flex;
-    /* use flex for easy vertical centering */
-    align-items: center;
-    /* vertically center children (including ::before) */
-    height: 3.5vh;
 }
