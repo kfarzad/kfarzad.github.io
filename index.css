@@ -43,7 +43,7 @@ footer {
     /* color: #777; */
     padding: 0vh;
     height: 3.5vh;
-    width: 100vw;
+    width: 100%;
     font-size: min(1.5vh, 5vw);
     background: linear-gradient(to right, #e6e6e6, #1a1a1a);
     color: #ffffff;
