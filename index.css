@@ -19,7 +19,7 @@ main {
     background: linear-gradient(to right, #e6e6e6, #1a1a1a);
     color: #fff;
     /* width: 100%; */
-    height: 93vh;
+    height: 86vh;
     /* flex-grow: 1; */
     /* font-size: 500%; */
     font-size: min(12vh, 24vw);
@@ -174,4 +174,14 @@ nav ul.nav li>a.dropdown-toggle::before {
 */
 nav ul.nav li.dropdown.active>a.dropdown-toggle::before {
     content: "I";
+}
+
+.special-box {
+    color: #ffffff;
+    opacity: 0.15;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 3.5vh;
 }
