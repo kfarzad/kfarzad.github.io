@@ -111,6 +111,7 @@ p {
 ul {
     list-style-type: disc;
     padding-left: 20px;
+    margin-top: -5;
 }
 
 @media (max-width: 700px) {
@@ -309,4 +310,10 @@ nav ul.nav li.dropdown.active>a.dropdown-toggle::before {
 
 .black-link:hover {
     text-decoration: underline;
+}
+
+.license-link {
+    font-size: 0.4em;
+    color: orange;
+    text-decoration: none;
 }
