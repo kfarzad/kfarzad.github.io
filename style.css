@@ -47,7 +47,7 @@ p a:hover {
 header {
     background: linear-gradient(to right, #e6e6e6, #1a1a1a);
     color: #fff;
-    padding: 5vh 10vw;
+    padding: 1vh 10vw;
     text-align: center;
 }
 
@@ -68,7 +68,7 @@ header p {
 .container {
     /* max-width: 1000px; */
     margin: 0 auto;
-    padding: 0 8vw;
+    padding: 3vh 8vw;
     /* height: 93vh; */
     background: #fff;
     /* border-radius: 5px; */
@@ -84,6 +84,13 @@ section {
 
 section:last-child {
     border-bottom: none;
+}
+
+h3 {
+    font-size: min(4vh, 20vw);
+    margin-bottom: 0vh;
+    color: #000000;
+    position: relative;
 }
 
 h2 {
