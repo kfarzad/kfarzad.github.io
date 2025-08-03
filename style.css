@@ -47,7 +47,10 @@ p a:hover {
 header {
     background: linear-gradient(to right, #e6e6e6, #1a1a1a);
     color: #fff;
-    padding: 1vh 10vw;
+    padding-top: 5vh;
+    padding-right: 10vw;
+    padding-bottom: 5vh;
+    padding-left: 10vw;
     text-align: center;
 }
 
