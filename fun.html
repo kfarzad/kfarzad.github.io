@@ -15,7 +15,6 @@
 
     <main>
         <header>
-            <h1>Under Construction...</h1>
             <h1>Spread Love Everywhere You Go</h1>
             <p>Feel free to enjoy my designs.</p>
             <p style="line-height: 0.5;">
@@ -33,12 +32,21 @@
         </header>
         <div class="container">
             <h3 id="3d_stls">3D STLs</h3>
-            <section>
-
-                <h2>Coming Soon...</h2>
+            <!-- <section>
+                <h2></h2>
                 <p>
                 </p>
-            </section>
+                <div class="box-wrapper">
+                    <div class="box">
+                        <img src="files/3d_stls/xxx.jpg" alt="Chopsticks Holder preview"
+                            onclick="openLightbox(this.src)">
+                        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                            <img id="lightbox-img" src="">
+                        </div>
+                        <a class="download-link" href="xxx.stl" download>Download<br>xxx</a>
+                    </div>
+                </div>
+            </section> -->
 
             <section>
                 <h2>Mini Backgammon</h2>
@@ -58,21 +66,53 @@
                 </p>
                 <div class="box-wrapper">
                     <div class="box">
-                        <img src="files/3d_stls/mini_backgammon/board.png" alt="Backgammon board preview">
+                        <img src="files/3d_stls/mini_backgammon/board.png" alt="Backgammon board preview"
+                            onclick="openLightbox(this.src)">
+                        <!-- Lightbox -->
+                        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                            <img id="lightbox-img" src="">
+                        </div>
                         Board
                     </div>
                     <div class="box">
+                        <!-- Thumbnail -->
+                        <img src="files/3d_stls/mini_backgammon/piece.png" alt="Backgammon piece preview"
+                            onclick="openLightbox(this.src)">
+                        <!-- Lightbox -->
+                        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                            <img id="lightbox-img" src="">
+                        </div>
                         <a class="download-link" href="files/3d_stls/mini_backgammon/0015_backgammon_pieces_mini.stl"
-                            download>
-                            <img src="files/3d_stls/mini_backgammon/piece.png" alt="Backgammon piece preview">
-                        </a>
-                        <a class="download-link" href="files/3d_stls/mini_backgammon/0015_backgammon_pieces_mini.stl"
-                            download>Piece</a>
+                            download>Download Piece</a>
                     </div>
                 </div>
                 <p>
                     Can't download the Board? You might want to go back and get to know me a bit better!
                 </p>
+            </section>
+            <section>
+
+                <h2>Chopsticks Holder</h2>
+                <p>
+                    A simple chopsticks holder to keep your chopsticks off the table and dry after wash.<br>
+                    How to print: No supports needed. Print vertical on the bed for best results.<br>
+                    Material suggestion: PLA<br>
+                    Note: This design is intended for standard chopsticks. If you have unusually large or small
+                    chopsticks, you may need to adjust the dimensions accordingly.
+                </p>
+                <div class="box-wrapper">
+                    <div class="box">
+                        <!-- Thumbnail -->
+                        <img src="files/3d_stls/chopsticks_holder/0005_chopsticks_holder.jpg"
+                            alt="Chopsticks Holder preview" onclick="openLightbox(this.src)">
+                        <!-- Lightbox -->
+                        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                            <img id="lightbox-img" src="">
+                        </div>
+                        <a class="download-link" href="files/3d_stls/chopsticks_holder/0005_chopsticks_holder.stl"
+                            download>Download<br>Chopsticks Holder</a>
+                    </div>
+                </div>
             </section>
         </div>
 
@@ -95,7 +135,7 @@
 
     <footer id="footer"></footer>
     <script src="footer.js"></script>
-
+    <script src="lightbox.js"></script>
 </body>
 
 </html>
