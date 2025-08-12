@@ -163,7 +163,7 @@ nav ul.nav li>a.dropdown-toggle {
 
 /* Base styles for dropdown toggle links */
 nav ul.nav li>a.dropdown-toggle::before {
-    content: "O";
+    content: "MENU";
     /* font-weight: bold; */
     font-size: min(2vh, 10vw);
 }
@@ -173,7 +173,7 @@ nav ul.nav li>a.dropdown-toggle::before {
   The icon now changes when the 'active' class is present.
 */
 nav ul.nav li.dropdown.active>a.dropdown-toggle::before {
-    content: "I";
+    content: "CLOSE";
 }
 
 .special-box {
