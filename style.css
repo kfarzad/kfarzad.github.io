@@ -286,10 +286,16 @@ nav ul.nav li.dropdown.active>a.dropdown-toggle::before {
     width: min(50%, 300px);
     height: min(50%, 300px);
     object-fit: cover;
+    display: block;
+    /* transition: transform .2s ease; */
     /* border-radius: 50%; */
     /* border: 4px solid #333; */
     /* adjust color as needed */
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+}
+
+.profile-frame:hover .profile-pic {
+    /* transform: scale(1.05); */
 }
 
 .box-wrapper {
@@ -339,6 +345,33 @@ nav ul.nav li.dropdown.active>a.dropdown-toggle::before {
 .box-research img {
     max-width: 100%;
     height: auto;
+    transition: transform 0.2s ease;
+    /* smooth hover */
+}
+
+/* Hover zoom effect only inside .box-research */
+.box-research img:hover {
+    transform: scale(1.05);
+}
+
+.box-experience {
+    border: 2px solid #808080;
+    /* border-radius: 10px; */
+    padding: 15px;
+    width: min(50%, 200px);
+    text-align: center;
+}
+
+.box-experience img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.2s ease;
+    /* smooth hover */
+}
+
+/* Hover zoom effect only inside .box-experience */
+.box-experience img:hover {
+    transform: scale(1.05);
 }
 
 /* Overlay background */
@@ -363,8 +396,4 @@ nav ul.nav li.dropdown.active>a.dropdown-toggle::before {
 
 .lightbox:target {
     display: flex;
-}
-
-img:hover {
-    transform: scale(1.05);
 }
