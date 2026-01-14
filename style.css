@@ -15,6 +15,14 @@ body {
     line-height: 1.5;
 }
 
+strong {
+    font-family: 'Roboto Bold', sans-serif;
+    line-height: 1.5;
+    /* maximum bold */
+    color: #000000;
+    /* ensures visibility */
+}
+
 main {
     background: linear-gradient(to right, #e6e6e6, #1a1a1a);
     color: #000000;
